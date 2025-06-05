@@ -1,22 +1,13 @@
-import { useEffect, useState } from 'react'
-import { Timer } from './components/Timer'
+import { Card1, Card2, ErrorBoundary } from "./components/errorbound"
 
 function App() {
-  const [showtimer, setShowtimer] = useState(true)
-
-  useEffect(()=>{
-    const interval = setInterval(() => {
-      setShowtimer(currval => !currval)
-    }, 5000);
-    
-    return () => {
-      clearInterval(interval);
-    }
-  },[])
-
   return (
     <div>
-     { showtimer && <Timer/>}
+      <ErrorBoundary>
+        <Card1/>
+
+      </ErrorBoundary>
+      <Card2/>
     </div>
   )
 }

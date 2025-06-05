@@ -12,7 +12,7 @@ export function Timeline(){
         img: "https://appx-wsb-gcp-mcdn.akamai.net.in/subject/2023-01-17-0.17044360120951185.jpg"
     }
     const postsData = post.map((post: Prop) => <Post
-        key={post.id}
+        key={post.id}       // important for recoil and avoiding un-necessary renders.
         name = {post.name}
         subtitle={post.subtitle}
         time = {post.time}

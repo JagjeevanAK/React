@@ -7,7 +7,7 @@ export function Timer () {
         let clock = setInterval(()=>{
             setSeconds(prevSeconds => prevSeconds + 1);
         },1000);
-        
+
         return function() {
             clearInterval(clock);
         }
@@ -16,6 +16,7 @@ export function Timer () {
     return (
         <>
             <div>{seconds} second elapsed</div>
+            <div>hello world</div>
         </>
     )
 }
