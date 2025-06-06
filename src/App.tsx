@@ -1,13 +1,9 @@
-import { Card1, Card2, ErrorBoundary } from "./components/errorbound"
+import { AppRoute } from "./components/appRoute"
 
 function App() {
   return (
     <div>
-      <ErrorBoundary>
-        <Card1/>
-
-      </ErrorBoundary>
-      <Card2/>
+      <AppRoute/>
     </div>
   )
 }

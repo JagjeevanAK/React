@@ -38,9 +38,10 @@ export class ErrorBoundary extends React.Component<Props, State> {
 
 
 
+// below are the testing functions
+
 export function Card1(){
     throw new Error("Error while Rendering");
-
     return (
         <div style={{background:"red", borderRadius:20, padding:20, margin:20}}>
             Hello
