@@ -1,9 +1,9 @@
-import { AppRoute } from "./components/appRoute"
+import { Input } from "./components/input"
 
 function App() {
   return (
     <div>
-      <AppRoute/>
+      <Input/>
     </div>
   )
 }

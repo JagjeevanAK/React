@@ -2,20 +2,19 @@ import { BrowserRouter, Routes, Route, Link, useNavigate, Router } from "react-r
 import { Timeline } from "./timeline";
 import { ToogleMessage } from "./toggle";
 import { NotFound } from "./NotFound";
+import { Layout } from "./layout";
 
 export function AppRoute(){
     return(
         // Usually this is written in App.tsx or app component
         <BrowserRouter>
-            <Link to="/" >Home</Link>
-            <Link to="/toggle" >Magic Route</Link>
-            <Link to="demo" >Demo page</Link>
-            <br/>
             <Routes>
-                <Route index element={<Timeline/>} />
-                <Route path="toggle" element={<ToogleMessage/>}/>
-                <Route path="demo" element={<Demo/>}/>
-                <Route path="*" element={<NotFound/>}/>
+                <Route path="/" element={<Layout/>}>
+                    <Route index element={<Timeline/>} />
+                    <Route path="toggle" element={<ToogleMessage/>}/>
+                    <Route path="demo" element={<Demo/>}/>
+                    <Route path="*" element={<NotFound/>}/>
+                </Route>
             </Routes>
         </BrowserRouter>
     )
